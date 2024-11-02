@@ -126,6 +126,30 @@ Please note that I don't offer carts, boards, or parts myself.
 
 ### Software
 
+#### Pre-built firmware
+
+Firmware for the ATmega 328p is included: [avr/finalgrom.hex](avr/finalgrom.hex).
+
+To apply the pre-built firmware, run the following:
+
+    $ avrdude -p m328p -c usbasp -U flash:w:finalgrom.hex
+
+Additionally, you need to program the lower fuse bits of the 328P so that it
+runs at 8 Mhz:
+
+    $ avrdude -p m328p -c usbasp -U lfuse:w:0xe2:m
+
+Once the ATmega 328p firmware is applied, you can use it to update the CPLD.
+
+* Copy [updates/firmware.pld](updates/firmware.pld) to a compatible SDCard as UPDATE.PLD.
+* Insert the SDCard into your FinalGROM99.
+* Boot your TI-99 with the FInalGROM inserted and it will update the CPLD.
+* The FinalFROM99 LED  should flash continuously for around 10 seconds.
+* Once completed, turn off your TI-99, remove the SDCard and delete UPDATE.PLD if it's still there.
+* Fill your SDCard with TI-99 ROMS and you're all set :)
+
+### Build from source
+
 The firmware for the ATmega 328P consists of two components.  The `avr/`
 folder contains the microcontroller logic for accessing the SD card,
 generating the image browser, loading the selected image, and controlling
