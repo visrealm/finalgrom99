@@ -146,7 +146,7 @@ Once the ATmega 328p firmware is applied, you can use it to update the CPLD.
 * Copy [updates/firmware.pld](updates/firmware.pld) to a compatible SDCard as UPDATE.PLD.
 * Insert the SDCard into your FinalGROM99.
 * Boot your TI-99 with the FInalGROM inserted and it will update the CPLD.
-* The FinalFROM99 LED  should flash continuously for around 10 seconds.
+* The FinalGROM99 LED should flash continuously for around 10 seconds.
 * Once completed, turn off your TI-99, remove the SDCard and delete UPDATE.PLD if it's still there.
 * Fill your SDCard with TI-99 ROMS and you're all set :)
 
