@@ -130,7 +130,7 @@ Please note that I don't offer carts, boards, or parts myself.
 
 Firmware for the ATmega 328p is included: [avr/finalgrom.hex](avr/finalgrom.hex).
 
-To apply the pre-built firmware, run the following:
+To apply the pre-built firmware, run the following: 
 
     $ avrdude -p m328p -c usbasp -U flash:w:finalgrom.hex
 
@@ -138,6 +138,8 @@ Additionally, you need to program the lower fuse bits of the 328P so that it
 runs at 8 Mhz:
 
     $ avrdude -p m328p -c usbasp -U lfuse:w:0xe2:m
+
+**Note:** I'm using a [USBasp](https://www.amazon.com/Geekstory-Microcontroller-Programmer-Downloader-Adapter/dp/B07NZ59VK2). I installed drivers for it using [Zadig](https://zadig.akeo.ie/):
 
 Once the ATmega 328p firmware is applied, you can use it to update the CPLD.
 
@@ -181,7 +183,7 @@ and bootloader.  You can flash the file to the ATmega 328P using
 
 **Note:** This file is packaged here as [avr/finalgrom.hex](avr/finalgrom.hex)
 
-    $ avrdude -p m328p -P /dev/ttyACM0 -c stk500 -U flash:w:finalgrom.hex
+    $ avrdude -p m328p -P /dev/ttyACM0 -c stk500 -U flash:w:package.hex
 
 Additionally, you need to program the lower fuse bits of the 328P so that it
 runs at 8 Mhz:
