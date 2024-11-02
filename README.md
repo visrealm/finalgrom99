@@ -77,7 +77,7 @@ devices (SMD), of which two are programmable.  For starters, this
 [video tutorial][12] shows how to solder SMD ICs by hand.
 
 
-### Hardware
+## Hardware
 
 To build the FinalGROM 99, you need the following components:
 
@@ -119,14 +119,18 @@ used, so potential substitutes must be powered by 3.3V.
 With some work, the FinalGROM 99 can be mounted in a standard TI 99
 cartridge shell.
 
+There is a very handy [drilling template](https://www.thingiverse.com/thing:5352564) available on Thingiverse. It also includes a nice [cartridge label](https://cdn.thingiverse.com/assets/28/5c/bf/46/e8/large_display_FinalGROM99_cart_label_CS3.png).
+
+![Cartridge label](https://cdn.thingiverse.com/assets/28/5c/bf/46/e8/large_display_FinalGROM99_cart_label_CS3.png)
+
 ![Mounted in Cartridge Shell](/doc/cartshell.jpg)
 
 Please note that I don't offer carts, boards, or parts myself.
 
 
-### Software
+## Software
 
-#### Pre-built firmware
+### Pre-built firmware
 
 Firmware for the ATmega 328p is included: [avr/finalgrom.hex](avr/finalgrom.hex).
 
