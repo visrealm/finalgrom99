@@ -155,7 +155,9 @@ The last build yields a `package.hex` file containing both machine code
 and bootloader.  You can flash the file to the ATmega 328P using
 [`avrdude`][8] or any other programmer:
 
-    $ avrdude -p m328p -P /dev/ttyACM0 -c stk500 -U flash:w:package.hex
+**Note:** This file is packaged here as [avr/finalgrom.hex](avr/finalgrom.hex)
+
+    $ avrdude -p m328p -P /dev/ttyACM0 -c stk500 -U flash:w:finalgrom.hex
 
 Additionally, you need to program the lower fuse bits of the 328P so that it
 runs at 8 Mhz:
